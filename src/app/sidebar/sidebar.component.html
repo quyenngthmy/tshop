@@ -1,0 +1,183 @@
+
+  <!-- Header -->
+ <a href="#" class="flex flex-col items-center py-2 px-50 w-full bg-neutral_3_dark_bg-900">
+    <!-- Logo -->
+      <img src="../../assets/icon/tshop-text.png" alt="Logo Tshop">
+ </a>
+ <!-- Menu -->
+<div class="w-full h-full overflow-y-scroll scrollbar-hide pt-2 px-2 font-normal text-sm">
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/home.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Trang chủ
+      </p>
+    </div>
+  </button>
+
+  <button
+  class="flex flex-col w-full"
+  (click)="toggle()">
+    <div class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+      <div class="flex">
+        <img src="../../assets/icon/msg.png" class="ml-3.5 my-3 mr-2.5">
+        <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+          Trò chuyện
+        </p>
+      </div>
+      <img
+      [src]="flag ? '../../assets/icon/arrow-right.png' : '../../assets/icon/arrow-up.png'"
+      class="pl-2 p-3.5">
+    </div>
+
+    <ul [ngClass]="{'hidden':flag}" class="items-center text-neutral_3_textInverseBlue-400 text-sm w-full">
+      <li class="flex rounded hover:bg-neutral_3_dark_bg-600 hover:text-neutral_3_textInverseBlue-900 items-center">
+        <div class="w-7px h-7px bg-primary-1 rounded-xl ml-7 my-4 mr-2"></div>
+        <p class="py-3 pr-4">Danh sách tin nhắn</p>
+      </li>
+      <li class="flex py-3 pr-4 pl-11 rounded hover:bg-neutral_3_dark_bg-600 hover:text-neutral_3_textInverseBlue-900">Thiết lập chat</li>
+    </ul>
+
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/bag.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Đơn hàng
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/product.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Sản phẩm
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/star-round.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Đánh giá
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/user.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Danh sách khách hàng
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/discount.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Khuyến mãi
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/marketing.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Quảng cáo sản phẩm
+      </p>
+    </div>
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/shop.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Quản lý shop
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/transport.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Quản lý vận chuyển
+      </p>
+    </div>
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/supplier.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Quản lý kho
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/wallet.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Quản lý tài chính
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/chart-pie.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Báo cáo
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/user.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Quản lý nhân viên
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+
+  <button class="flex justify-between w-full items-center rounded hover:bg-neutral_3_dark_bg-600">
+    <div class="flex">
+      <img src="../../assets/icon/gear.png" class="py-2.5 pl-3 pr-2">
+      <p class="font-normal text-sm text-neutral_3_textInverseBlue-900 py-3">
+        Cấu hình tài khoản
+      </p>
+    </div>
+    <img src="../../assets/icon/arrow-right.png" class="pl-2 p-3.5">
+  </button>
+</div>
+
+ <!-- Footer -->
+ <div class="flex justify-between items-center w-full px-4">
+  <button class="pb-4 hover:opacity-80">
+    <img src="../../assets/icon/Button_Help.png">
+  </button>
+  <button class="pb-6 hover:opacity-80">
+    <img src="../../assets/icon/arrow-left.png">
+  </button>
+
+ </div>
+

@@ -1,0 +1,222 @@
+
+<div class="flex font-medium text-sm">
+  <button class="flex justify-center w-1/2 border-b-2 border-solid border-primary-1 px-6 py-22px">
+    Khách hàng
+  </button>
+  <button class="flex justify-center w-1/2 bg-neutral_3_light-50 text-neutral_1_text-300 px-6 py-22px">
+    Đơn hàng
+  </button>
+</div>
+
+<!-- Info customer -->
+<div class="flex justify-between items-center pt-6 px-2" >
+  <div class="flex items-center">
+    <img src="../../../assets/icon/user-primary.png" alt="user-primary" class="m-2">
+    <p class="uppercase font-medium text-sm">Thông tin khách hàng</p>
+  </div>
+  <div>
+    <button>
+      <img [src]="flagInfo ? '../../assets/icon/arrow-right.png' : '../../assets/icon/arrow-down.png'"
+      class="mr-2.5"
+      (click)="toggleInfo()">
+    </button>
+  </div>
+</div>
+
+<div [ngClass]="{'hidden':flagInfo}">
+    <div class="flex pt-3">
+      <!-- Avatar -->
+      <div class="flex relative flex-col pr-3">
+        <img
+        src="../../../assets/icon/Avatar_customer.png"
+        alt="Avatar"
+        class="ml-4 mt-2 w-16 h-16">
+        <div class="absolute left-0 right-0 -bottom-2 flex items-center justify-center">
+          <p class="flex  px-2 py-0.5 justify-center bg-warning-400 text-white rounded-md text-xs font-medium text-center truncate">Vàng</p>
+        </div>
+
+      </div>
+
+      <!-- Infomation -->
+      <div class="block">
+        <div class="flex mt-2 font-medium text-base">
+          <h2>Nguyễn Văn Huy</h2>
+          <h2 class="mx-2">-</h2>
+          <h2 class="text-primary-1">MH123123</h2>
+        </div>
+        <div class="flex">
+          <img src="../../../assets/icon/star-round-primary.png" alt="star-primary" class="mt-1.5 mr-1 h-4">
+          <p class="text-neutral_1_text-900 text-sm font-normal pt-1">1000</p>
+        </div>
+      </div>
+    </div>
+
+      <!-- Contact -->
+      <div class="flex text-neutral_1_text-900 text-sm pb-3 pt-5 font-sans">
+        <div class="flex flex-col w-1/2 pl-4 font-normal">
+
+            <p class="flex items-center pb-4">
+              <img src="../../../assets/icon/call.png" alt="call-voice" class="mr-2">
+              0987654321
+            </p>
+            <p class="flex items-center pb-4">
+              <img src="../../../assets/icon/location.png" alt="location" class="mr-2">
+              12 CN1, Sơn Kỳ, Tân Phú, Thành phố Hồ Chí Minh
+            </p>
+
+        </div>
+
+        <div class="flex w-1/2 flex-col pl-6">
+            <p class="flex items-center font-normal pb-4 ">
+              <img src="../../../assets/icon/email.png" alt="email" class="mr-2">
+              vanhuy20@gmail.com
+            </p>
+            <a class="flex items-center font-semibold text-info-500 hover:opacity-90" href="#">
+              <img src="../../../assets/icon/facebook.png" alt="facebook" class="mr-2">
+              fb.com/1234567890
+            </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Border -->
+    <div class="border-solid border-t bg-neutral_2_border-100 mx-4"></div>
+    <!-- Note -->
+  <div class="flex justify-between px-2 pt-6">
+    <div class="flex items-center font-medium text-sm">
+      <img src="../../../assets/icon/note24x24.png" alt="note.png" class="m-2">
+      <p class="uppercase py-2.5">Ghi chú</p>
+    </div>
+    <button>
+      <img [src]="flagNote ? '../../assets/icon/arrow-right.png' : '../../assets/icon/arrow-down.png'"
+      class="mr-2.5"
+      (click)="toggleNote()">
+    </button>
+  </div>
+
+
+  <!-- Note input -->
+  <div class=" flex pl-4 py-5 text-sm" [ngClass]="{'hidden':flagNote}">
+    <input type="text"
+    placeholder="Nhập ghi chú"
+    class="outline-none border-neutral_2_border-200 border-solid border w-3/4 rounded-md px-3 py-1.5 font-normal">
+    <button class="flex text-white bg-primary-1 w-35 items-center mr-4 rounded-lg truncate hover:opacity-90 ml-2">
+      <img src="../../../assets/icon/note20x20.png" class="ml-3 my-1.5 mr-2">
+      <p class="my-1.5 mr-7 font-medium">Thêm ghi chú</p>
+    </button>
+  </div>
+
+<!-- User admin -->
+  <div class="overflow-y-scroll scrollbar-hide h-full px-2">
+
+    <div class="flex justify-between items-center">
+      <div class="flex">
+        <img src="../../../assets/icon/Avatar-user.png" alt="Avatar-user" class="pt-2 pl-2 pr-3 pb-4">
+        <div class="block pt-2 text-sm">
+          <h2 class="font-medium pb-1">Username (admin)</h2>
+          <div class="flex text-xs font-normal text-neutral_1_text-400">
+            <p class=" pr-2">16:15</p>
+            <p>25-06-2021</p>
+          </div>
+        </div>
+      </div>
+      <button>
+        <img src="../../../assets/icon/trash.png" alt="trash" class="pt-2.5 hover:opacity-90">
+      </button>
+    </div>
+    <p class="pb-4 pl-2 text-sm font-normal">Đây là khách hàng vip, đã từng mua rất nhiều đơn hàng</p>
+    <div class="border-solid border-b bg-neutral_2_border-100 mx-2"></div>
+
+    <div class="flex justify-between items-center">
+      <div class="flex">
+        <img src="../../../assets/icon/Avatar-user.png" alt="Avatar-user" class="pt-2 pl-2 pr-3 pb-4">
+        <div class="block pt-2 text-sm">
+          <h2 class="font-medium mb-1">Username (admin)</h2>
+          <div class="flex">
+            <p class="text-neutral_1_text-400 text-xs pr-2">16:15</p>
+            <p class="text-neutral_1_text-400 text-xs">25-06-2021</p>
+          </div>
+        </div>
+      </div>
+      <button>
+        <img src="../../../assets/icon/trash.png" alt="trash" class="pt-2.5 hover:opacity-90">
+      </button>
+    </div>
+    <p class="pb-4 pl-2 text-sm">Đây là khách hàng vip, đã từng mua rất nhiều đơn hàng</p>
+    <div class="border-solid border-b bg-neutral_2_border-100 mx-2"></div>
+
+    <div class="flex justify-between items-center">
+      <div class="flex">
+        <img src="../../../assets/icon/Avatar-user.png" alt="Avatar-user" class="pt-2 pl-2 pr-3 pb-4">
+        <div class="block pt-2 text-sm">
+          <h2 class="font-medium mb-1">Username (admin)</h2>
+          <div class="flex">
+            <p class="text-neutral_1_text-400 text-xs pr-2">16:15</p>
+            <p class="text-neutral_1_text-400 text-xs">25-06-2021</p>
+          </div>
+        </div>
+      </div>
+      <button>
+        <img src="../../../assets/icon/trash.png" alt="trash" class="pt-2.5 hover:opacity-90">
+      </button>
+    </div>
+    <p class="pb-4 pl-2 text-sm">Đây là khách hàng vip, đã từng mua rất nhiều đơn hàng</p>
+    <div class="border-solid border-b bg-neutral_2_border-100 mx-2"></div>
+
+    <div class="flex justify-between items-center">
+      <div class="flex">
+        <img src="../../../assets/icon/Avatar-user.png" alt="Avatar-user" class="pt-2 pl-2 pr-3 pb-4">
+        <div class="block pt-2 text-sm">
+          <h2 class="font-medium mb-1">Username (admin)</h2>
+          <div class="flex">
+            <p class="text-neutral_1_text-400 text-xs pr-2">16:15</p>
+            <p class="text-neutral_1_text-400 text-xs">25-06-2021</p>
+          </div>
+        </div>
+      </div>
+      <button>
+        <img src="../../../assets/icon/trash.png" alt="trash" class="pt-2.5 hover:opacity-90">
+      </button>
+    </div>
+    <p class="pb-4 pl-2 text-sm">Đây là khách hàng vip, đã từng mua rất nhiều đơn hàng</p>
+    <div class="border-solid border-b bg-neutral_2_border-100 mx-2"></div>
+
+    <div class="flex justify-between items-center">
+      <div class="flex">
+        <img src="../../../assets/icon/Avatar-user.png" alt="Avatar-user" class="pt-2 pl-2 pr-3 pb-4">
+        <div class="block pt-2 text-sm">
+          <h2 class="font-medium mb-1">Username (admin)</h2>
+          <div class="flex">
+            <p class="text-neutral_1_text-400 text-xs pr-2">16:15</p>
+            <p class="text-neutral_1_text-400 text-xs">25-06-2021</p>
+          </div>
+        </div>
+      </div>
+      <button>
+        <img src="../../../assets/icon/trash.png" alt="trash" class="pt-2.5 hover:opacity-90">
+      </button>
+    </div>
+    <p class="pb-4 pl-2 text-sm">Đây là khách hàng vip, đã từng mua rất nhiều đơn hàng</p>
+    <div class="border-solid border-b bg-neutral_2_border-100 mx-2"></div>
+
+    <div class="flex justify-between items-center">
+      <div class="flex">
+        <img src="../../../assets/icon/Avatar-user.png" alt="Avatar-user" class="pt-2 pl-2 pr-3 pb-4">
+        <div class="block pt-2 text-sm">
+          <h2 class="font-medium mb-1">Username (admin)</h2>
+          <div class="flex">
+            <p class="text-neutral_1_text-400 text-xs pr-2">16:15</p>
+            <p class="text-neutral_1_text-400 text-xs">25-06-2021</p>
+          </div>
+        </div>
+      </div>
+      <button>
+        <img src="../../../assets/icon/trash.png" alt="trash" class="pt-2.5 hover:opacity-90">
+      </button>
+    </div>
+    <p class="pb-4 pl-2 text-sm">Đây là khách hàng vip, đã từng mua rất nhiều đơn hàng</p>
+    <div class="border-solid border-b bg-neutral_2_border-100 mx-2"></div>
+  </div>
+
+
